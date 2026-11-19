@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home | North Star Bakery</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <div class="brand">
+      <a href="index.html"><img src="images/bakery-logo.png" alt="North Star Bakery logo, a star above a loaf of bread" width="64" height="64"></a>
+      <p>North Star Bakery</p>
+    </div>
+    <nav aria-label="Main navigation">
+      <ul>
+        <li><a href="index.html" aria-current="page">Home</a></li>
+        <li><a href="products.html">Our Products</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="contact.html">Contact and Pre-Orders</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <section class="hero">
+      <h1>Fresh bread from our neighborhood oven</h1>
+      <p>Welcome to North Star Bakery. We bake bread, pastries, and cakes by hand every morning, and we will save a loaf for you if you order ahead.</p>
+      <img src="images/bakery-storefront.jpg" alt="North Star Bakery storefront with a hanging sign and fresh bread in the window" width="640" height="400">
+      <p><a href="contact.html">Place a pre-order</a></p>
+    </section>
+
+    <section>
+      <h2>What we're known for</h2>
+      <p>Slow-fermented sourdough, buttery morning pastries, and celebration cakes made to order for families, commuters, and event planners across the neighborhood.</p>
+      <h3>A welcome from our bakers</h3>
+      <audio controls>
+        <source src="media/bakery-welcome.mp3" type="audio/mpeg">
+        <p>Your browser does not support audio playback. The message says: we bake fresh every morning, and we are glad you stopped by. <a href="media/bakery-welcome.mp3">Download the audio file</a>.</p>
+      </audio>
+    </section>
+
+    <div class="split">
+      <section>
+        <h2>Hours and location</h2>
+        <p>214 Maple Street, next to the Maple Street bus stop.</p>
+        <ul>
+          <li>Tuesday to Friday: 6:30 am to 5:00 pm</li>
+          <li>Saturday: 7:00 am to 4:00 pm</li>
+          <li>Sunday: 8:00 am to 2:00 pm</li>
+          <li>Monday: Closed</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Featured item of the week</h2>
+        <picture>
+          <source media="(min-width: 48em)" srcset="images/bakery-feature-large.jpg">
+          <img src="images/bakery-feature-small.jpg" alt="Golden honey oat loaf resting on a wooden board" width="400" height="300">
+        </picture>
+        <h3>Honey oat loaf</h3>
+        <p>Soft inside with a crisp crust. Pre-order by Thursday for weekend pickup.</p>
+        <p><a href="products.html">See all of our products</a></p>
+      </section>
+    </div>
+  </main>
+  <footer>
+    <p>North Star Bakery, 214 Maple Street. Open Tuesday to Sunday.</p>
+    <p><a href="contact.html">Send us a pre-order request</a></p>
+  </footer>
+</body>
+</html>

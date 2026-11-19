@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact and Pre-Orders | North Star Bakery</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <div class="brand">
+      <a href="index.html"><img src="images/bakery-logo.png" alt="North Star Bakery logo, a star above a loaf of bread" width="64" height="64"></a>
+      <p>North Star Bakery</p>
+    </div>
+    <nav aria-label="Main navigation">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="products.html">Our Products</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="contact.html" aria-current="page">Contact and Pre-Orders</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <section>
+      <h1>Contact and pre-orders</h1>
+      <p>Send us a question or request a pre-order. We reply within one business day.</p>
+
+      <form action="#" method="post">
+        <fieldset>
+          <legend>Your contact details</legend>
+
+          <p>
+            <label for="name">Name</label><br>
+            <input type="text" id="name" name="name" required minlength="2" maxlength="60" pattern="[A-Za-z .'\-]{2,60}" title="Use letters, spaces, periods, apostrophes, or hyphens only." autocomplete="name">
+          </p>
+
+          <p>
+            <label for="email">Email</label><br>
+            <input type="email" id="email" name="email" required autocomplete="email">
+          </p>
+        </fieldset>
+
+        <fieldset>
+          <legend>Your request</legend>
+
+          <p>
+            <label for="pickup">Pickup date</label><br>
+            <input type="date" id="pickup" name="pickup" required>
+          </p>
+
+          <p>
+            <label for="request-type">Request type</label><br>
+            <select id="request-type" name="request-type" required>
+              <option value="">Choose one</option>
+              <option value="pre-order">Pre-order</option>
+              <option value="question">General question</option>
+            </select>
+          </p>
+
+          <p>
+            <label for="details">Item details (items, quantities, and sizes)</label><br>
+            <textarea id="details" name="details" rows="4" cols="40" required minlength="10" maxlength="500"></textarea>
+          </p>
+
+          <p>
+            <label for="allergies">Allergy notes (optional)</label><br>
+            <textarea id="allergies" name="allergies" rows="2" cols="40" maxlength="200"></textarea>
+          </p>
+        </fieldset>
+
+        <p><button type="submit">Send request</button></p>
+      </form>
+    </section>
+
+    <div class="split">
+      <section>
+        <h2>Location</h2>
+        <p>214 Maple Street, next to the Maple Street bus stop.</p>
+      </section>
+
+      <section>
+        <h2>Hours of operation</h2>
+        <ul>
+          <li>Tuesday to Friday: 6:30 am to 5:00 pm</li>
+          <li>Saturday: 7:00 am to 4:00 pm</li>
+          <li>Sunday: 8:00 am to 2:00 pm</li>
+          <li>Monday: Closed</li>
+        </ul>
+      </section>
+    </div>
+  </main>
+  <footer>
+    <p>North Star Bakery, 214 Maple Street. Open Tuesday to Sunday.</p>
+    <p><a href="contact.html">Send us a pre-order request</a></p>
+  </footer>
+</body>
+</html>
