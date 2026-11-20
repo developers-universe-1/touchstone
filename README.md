@@ -9,5 +9,5 @@ Multi-page website for North Star Bakery, a neighborhood bakery. Built with HTML
 - contact.html
 
 ## Folders
-- images: bakery-logo.png, bakery-storefront.jpg, bakery-bread.jpg, bakery-signature-loaf.jpg, bakery-feature-small.jpg, bakery-feature-large.jpg
+- images: bakery-logo_c.png, bakery-storefront_c.png, bakery-bread_c.png, bakery-signature-loaf_c.png, bakery-feature-small_c.png, bakery-feature-large_c.png
 - media: bakery-welcome.mp3, bakery-behind-scenes.mp4
