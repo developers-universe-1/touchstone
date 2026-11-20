@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Our Products | North Star Bakery</title>
   <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
 </head>
 <body>
   <header>
@@ -28,20 +29,35 @@
       <img src="images/bakery-bread_c.png" alt="Assorted fresh loaves stacked on a bakery shelf" width="640" height="400">
     </section>
 
+    <section id="shortlist-panel" class="shortlist-panel" aria-labelledby="shortlist-heading">
+      <h2 id="shortlist-heading">Your pre-order shortlist</h2>
+      <p>Save the items you are thinking about, adjust the quantities, then send them with your pre-order request. We keep your shortlist on this device so it is still here when you come back.</p>
+      <p id="shortlist-count" class="shortlist-count" role="status" aria-live="polite">Nothing saved yet</p>
+      <ul id="shortlist-items" class="shortlist-items"></ul>
+      <p id="shortlist-empty" class="shortlist-empty">Use the “Add to shortlist” buttons below to start your list.</p>
+      <p class="shortlist-actions">
+        <a id="shortlist-order-link" class="button-link" href="contact.html#details">Send these items in a pre-order request</a>
+        <button type="button" id="clear-shortlist" class="secondary-button">Clear shortlist</button>
+      </p>
+    </section>
+
     <section>
       <h2>Breads</h2>
       <div class="cards">
-        <article>
+        <article class="product-card" data-product-id="signature-loaf" data-product-name="Signature Loaf" data-product-price="$8 to $10" data-product-category="Breads">
           <h3>Signature Loaf</h3>
           <p>Our 36-hour sourdough with a crackling crust. $8 to $10.</p>
+          <div class="product-controls"></div>
         </article>
-        <article>
+        <article class="product-card" data-product-id="honey-oat-loaf" data-product-name="Honey Oat Loaf" data-product-price="$7 to $9" data-product-category="Breads">
           <h3>Honey Oat Loaf</h3>
           <p>Soft crumb sweetened with local honey. $7 to $9.</p>
+          <div class="product-controls"></div>
         </article>
-        <article>
+        <article class="product-card" data-product-id="seeded-rye" data-product-name="Seeded Rye" data-product-price="$7 to $9" data-product-category="Breads">
           <h3>Seeded Rye</h3>
           <p>Dense, tangy rye packed with caraway and sunflower seeds. $7 to $9.</p>
+          <div class="product-controls"></div>
         </article>
       </div>
     </section>
@@ -49,17 +65,20 @@
     <section>
       <h2>Pastries</h2>
       <div class="cards">
-        <article>
+        <article class="product-card" data-product-id="butter-croissant" data-product-name="Butter Croissant" data-product-price="$3 to $4" data-product-category="Pastries">
           <h3>Butter Croissant</h3>
           <p>Flaky layers made with cultured butter. $3 to $4.</p>
+          <div class="product-controls"></div>
         </article>
-        <article>
+        <article class="product-card" data-product-id="cinnamon-knot" data-product-name="Cinnamon Knot" data-product-price="$4 to $5" data-product-category="Pastries">
           <h3>Cinnamon Knot</h3>
           <p>Twisted dough with cinnamon sugar and a light glaze. $4 to $5.</p>
+          <div class="product-controls"></div>
         </article>
-        <article>
+        <article class="product-card" data-product-id="fruit-galette" data-product-name="Seasonal Fruit Galette" data-product-price="$5 to $7" data-product-category="Pastries">
           <h3>Seasonal Fruit Galette</h3>
           <p>Rustic tart filled with fruit from nearby farms. $5 to $7.</p>
+          <div class="product-controls"></div>
         </article>
       </div>
     </section>
@@ -67,17 +86,20 @@
     <section>
       <h2>Cakes</h2>
       <div class="cards">
-        <article>
+        <article class="product-card" data-product-id="lemon-layer-cake" data-product-name="Lemon Layer Cake" data-product-price="$32 to $55" data-product-category="Cakes">
           <h3>Lemon Layer Cake</h3>
           <p>Three layers of lemon sponge with vanilla buttercream. $32 to $55.</p>
+          <div class="product-controls"></div>
         </article>
-        <article>
+        <article class="product-card" data-product-id="dark-chocolate-cake" data-product-name="Dark Chocolate Cake" data-product-price="$35 to $60" data-product-category="Cakes">
           <h3>Dark Chocolate Cake</h3>
           <p>Rich chocolate sponge with ganache, made to order. $35 to $60.</p>
+          <div class="product-controls"></div>
         </article>
-        <article>
+        <article class="product-card" data-product-id="carrot-cake" data-product-name="Carrot Cake" data-product-price="$30 to $50" data-product-category="Cakes">
           <h3>Carrot Cake</h3>
           <p>Spiced carrot cake with cream cheese frosting. $30 to $50.</p>
+          <div class="product-controls"></div>
         </article>
       </div>
       <p><a href="contact.html">Request a pre-order</a></p>

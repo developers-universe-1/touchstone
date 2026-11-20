@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contact and Pre-Orders | North Star Bakery</title>
   <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
 </head>
 <body>
   <header>
@@ -26,18 +27,20 @@
       <h1>Contact and pre-orders</h1>
       <p>Send us a question or request a pre-order. We reply within one business day.</p>
 
-      <form action="#" method="post">
+      <form id="preorder-form" action="#" method="post" novalidate>
         <fieldset>
           <legend>Your contact details</legend>
 
           <p>
             <label for="name">Name</label><br>
-            <input type="text" id="name" name="name" required minlength="2" maxlength="60" pattern="[A-Za-z .'\-]{2,60}" title="Use letters, spaces, periods, apostrophes, or hyphens only." autocomplete="name">
+            <input type="text" id="name" name="name" required minlength="2" maxlength="60" pattern="[A-Za-z .'\-]{2,60}" title="Use letters, spaces, periods, apostrophes, or hyphens only." autocomplete="name" aria-describedby="name-error">
+            <span class="error-message" id="name-error" role="alert"></span>
           </p>
 
           <p>
             <label for="email">Email</label><br>
-            <input type="email" id="email" name="email" required autocomplete="email">
+            <input type="email" id="email" name="email" required autocomplete="email" aria-describedby="email-error">
+            <span class="error-message" id="email-error" role="alert"></span>
           </p>
         </fieldset>
 
@@ -46,21 +49,26 @@
 
           <p>
             <label for="pickup">Pickup date</label><br>
-            <input type="date" id="pickup" name="pickup" required>
+            <input type="date" id="pickup" name="pickup" required aria-describedby="pickup-error">
+            <span class="error-message" id="pickup-error" role="alert"></span>
           </p>
 
           <p>
             <label for="request-type">Request type</label><br>
-            <select id="request-type" name="request-type" required>
+            <select id="request-type" name="request-type" required aria-describedby="request-type-error">
               <option value="">Choose one</option>
               <option value="pre-order">Pre-order</option>
               <option value="question">General question</option>
             </select>
+            <span class="error-message" id="request-type-error" role="alert"></span>
           </p>
 
           <p>
             <label for="details">Item details (items, quantities, and sizes)</label><br>
-            <textarea id="details" name="details" rows="4" cols="40" required minlength="10" maxlength="500"></textarea>
+            <button type="button" id="add-shortlist-details" class="text-button">Add my shortlist items</button>
+            <textarea id="details" name="details" rows="4" cols="40" required minlength="10" maxlength="500" aria-describedby="details-error shortlist-note"></textarea>
+            <span class="error-message" id="details-error" role="alert"></span>
+            <span id="shortlist-note" class="field-note" hidden>We filled this in from the shortlist you saved. Please check it and add any sizes or notes.</span>
           </p>
 
           <p>
@@ -70,6 +78,7 @@
         </fieldset>
 
         <p><button type="submit">Send request</button></p>
+        <p id="form-success" class="form-success" role="status" hidden></p>
       </form>
     </section>
 
